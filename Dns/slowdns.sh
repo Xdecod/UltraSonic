@@ -1,6 +1,6 @@
 #!/bin/bash
 # ===============================================
-sudo apt install squid -y
+apt install squid -y
 #mkdir /var/lib/ssnvpn-pro/
 #rm -f /usr/bin/menu-ssh
 
@@ -42,10 +42,10 @@ echo -e ""
 #echo $NS_DOMAIN > /root/nsdomain
 
 mkdir -p /etc/dns
-Host=inject.cloud
+Host=pro-tunnel.me
 sub=ns.`(</dev/urandom tr -dc a-z0-9 | head -c5)`
 #sub=ns.`</dev/urandom tr -dc x-z0-9 | head -c4`
-SUB_DOMAIN=${sub}.inject.cloud
+SUB_DOMAIN=${sub}.pro-tunnel.me
 NS_DOMAIN=${SUB_DOMAIN}
 echo "$NS_DOMAIN" >> /root/nsdomain
 
